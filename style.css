@@ -1659,3 +1659,35 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
 }
+/* BURGER: default hidden on desktop */
+.burger{
+  display: none;            /* ✅ ключове */
+  width: 44px;
+  height: 38px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.burger span{
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: rgba(255,255,255,.85);
+  border-radius: 2px;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .nav-desktop{ display: none !important; }
+  .burger{ display: flex !important; }  /* ✅ показуємо тільки тут */
+}
