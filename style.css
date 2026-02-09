@@ -1585,5 +1585,77 @@ body{
 body.menu-open #navOverlay{
   opacity: 1;
   pointer-events: auto;
+}
+/* ===== HEADER ===== */
+.header-container{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
+/* ===== DESKTOP ===== */
+.nav-desktop{
+  display: flex;
+}
+
+.burger{
+  display: none;        /* ❌ ховаємо на ПК */
+}
+
+/* ===== MOBILE ===== */
+/* ===== MOBILE HEADER ORDER FIX ===== */
+@media (max-width: 768px){
+
+  .header-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .burger{
+    display: flex !important;
+    order: 1;              /* ⬅️ БУРГЕР ПЕРШИЙ */
+    margin-right: 12px;
+  }
+
+  .logo{
+    order: 2;              /* ⬅️ ЛОГО ПІСЛЯ БУРГЕРА */
+  }
+
+  .nav-desktop{
+    display: none !important;
+  }
+}
+:root { --header-h: 64px; }  /* якщо треба — потім змінимо */
+
+.top-header{ height: var(--header-h); }
+.header-container{ height: 100%; }
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  padding-top: 0 !important;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.hero{
+  height: 100vh;                 /* рівно весь екран */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: var(--header-h);  /* місце під fixed header */
+  box-sizing: border-box;
+
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
