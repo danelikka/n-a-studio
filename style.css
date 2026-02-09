@@ -1211,7 +1211,7 @@ body{
   justify-content: center;
 
   padding: 32px 16px;       /* норм для моб + десктоп */
-  background-image: url("images/bg.jpg");
+  background-image: url("./bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1585,4 +1585,5 @@ body{
 body.menu-open #navOverlay{
   opacity: 1;
   pointer-events: auto;
+
 }
