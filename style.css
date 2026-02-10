@@ -554,17 +554,6 @@ header{
   background: #000;
   padding: 14px 0;
 }
-
-.header-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .logo {
   color: #fff;
   font-size: 18px;
@@ -753,8 +742,8 @@ header{
   border-bottom: none;
 }
 .booking{
-  padding: 90px 16px;
-  background: #ffffff;
+  padding: 120px 16px;
+  background: #f7f7f7;
 }
 
 .booking-wrap{
@@ -943,17 +932,6 @@ header.scrolled{
   background: #000;
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
-
-/* контейнер всередині */
-.header-container{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 /* текст в шапці */
 .top-header .logo,
 .top-header .nav a{
@@ -1377,12 +1355,6 @@ body{
   gap: 6px;
 }
 
-.header-container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between; /* logo зліва, бургер справа */
-}
-
 .burger{
   display:none;
   width:42px; height:42px;
@@ -1586,12 +1558,6 @@ body.menu-open #navOverlay{
   opacity: 1;
   pointer-events: auto;
 }
-/* ===== HEADER ===== */
-.header-container{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
 
 /* ===== DESKTOP ===== */
 .nav-desktop{
@@ -1630,14 +1596,6 @@ body.menu-open #navOverlay{
 .top-header{ height: var(--header-h); }
 .header-container{ height: 100%; }
 
-html, body{
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  padding-top: 0 !important;
-}
 html, body {
   margin: 0;
   padding: 0;
@@ -1690,4 +1648,56 @@ html, body {
 @media (max-width: 768px){
   .nav-desktop{ display: none !important; }
   .burger{ display: flex !important; }  /* ✅ показуємо тільки тут */
+}
+.opening-hours{
+  position: relative;
+  background-image: url("./bd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 16px;
+  overflow: hidden;
+}
+
+/* ПРОЗОРИЙ ШАР */
+.opening-hours::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.45); /* 👈 міняй прозорість тут */
+  z-index: 0;
+}
+
+/* контент поверх фону */
+.opening-hours > *{
+  position: relative;
+  z-index: 1;
+}
+/* header layout */
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .nav-desktop{ display: none !important; }
+
+  .burger{
+    display: flex !important;
+    margin-right: 12px;
+    flex: 0 0 auto;
+  }
+
+  .logo{
+    flex: 1;
+    text-align: center;
+    margin: 0;
+  }
+}
+body {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
 }

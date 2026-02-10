@@ -9,36 +9,39 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page">
+<body>
+<body>
+  <header class="top-header">
+    <div class="header-container">
 
-<header class="top-header">
-  <div class="header-container">
-    <div class="logo">N&A Studio</div>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="nav nav-desktop">
+      <div class="logo">N&A Studio</div>
+
+      <nav class="nav nav-desktop">
+        <a href="#sluzby">Služby</a>
+        <a href="#preco">Prečo my</a>
+        <a href="#hodiny">Hodiny</a>
+        <a href="#rezervacia">Rezervovať</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+    </div>
+
+    <div id="navOverlay" class="navOverlay"></div>
+
+    <nav id="mobileNav" class="mobileNav" aria-label="Mobile menu">
       <a href="#sluzby">Služby</a>
       <a href="#preco">Prečo my</a>
       <a href="#hodiny">Hodiny</a>
       <a href="#rezervacia">Rezervovať</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <button class="burger" type="button" aria-label="Menu" aria-expanded="false">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-  </div>
-
-<div id="navOverlay" class="navOverlay"></div>
-
-<nav id="mobileNav" class="mobileNav" aria-label="Mobile menu">
-  <a href="#sluzby">Služby</a>
-  <a href="#preco">Prečo my</a>
-  <a href="#hodiny">Hodiny</a>
-  <a href="#rezervovat">Rezervovať</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
-</header>
+  </header>
 
 <section class="hero" id="home">
   <div class="hero-card">
@@ -191,7 +194,6 @@
 
   </div>
 </section>
-
 <section class="contact">
   <div class="contact-wrap" id="kontakt">
 
