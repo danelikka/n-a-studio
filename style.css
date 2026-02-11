@@ -1700,4 +1700,25 @@ body {
   opacity: 1 !important;
   visibility: visible !important;
   display: block !important;
+
+}
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,.55);
+}
+
+.header-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;   /* ОЦЕ прибере “прилипання” до країв */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav.nav-desktop a{
+  margin-left: 18px;
+  white-space: nowrap;
 }
